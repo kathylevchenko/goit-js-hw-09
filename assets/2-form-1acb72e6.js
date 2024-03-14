@@ -1,2 +1,0 @@
-const l="feedback-form-state",r=document.querySelector(".feedback-form");r.addEventListener("submit",s);let e=JSON.parse(localStorage.getItem(l))||{};const{email:a,message:t}=r.elements;m();function m(){e&&(a.value=e.email||"",t.value=e.message||"")}function s(o){if(o.preventDefault(),console.log({email:a.value,message:t.value}),a.value===""||t.value==="")return alert("Будь ласка, заповніть всі обов'язкові поля.");localStorage.removeItem(l),o.currentTarget.reset(),e={}}
-//# sourceMappingURL=2-form-1acb72e6.js.map
