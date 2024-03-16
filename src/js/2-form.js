@@ -26,13 +26,15 @@ window.addEventListener('load', downloadForm);
 form.addEventListener('submit', e => {
   e.preventDefault();
   localStorage.removeItem(STORAGE_KEY);
-  if (form.elements.email.value === '') {
+  if (form.elements.email.value.trim() === '') {
     alert('Please enter your email');
+    return form.reset
   }
-  if (form.elements.message.value === '') {
+  if (form.elements.message.value.trim() === '') {
     alert('Please enter your message');
+    return form.reset
   }
-
+ 
   console.log({
     email: form.elements.email.value.trim(),
     message: form.elements.message.value.trim(),
